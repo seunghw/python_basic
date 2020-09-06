@@ -26,3 +26,23 @@ level 3 for문
 range(2,7) = 2
 ex) for i in range(0,10) 
  >> 0부터 10미만인 9까지 반복
+
+## sys.stdin.readline
+Python에서 입력값을 받을 때 input() 함수를 사용하지만 시간단축을 위해 sys.stdin.readline을 사용한다.
+
+num = int(input())   ->  num = int(sys.stdin.readline())
+
+사용 시, import sys  선언 필요
+
+
+여러 라인 입력 받을 경우 아래와 같이 사용하는 게 빠르다고 함.
+
+n = input()
+a = [sys.stdin.readline() for i in range(n)]
+
+## sys.stdin: 
+
+여러 줄 입력 받을 때
+
+for line in sys.stdin:
+    print(line)
